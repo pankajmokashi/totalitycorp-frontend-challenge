@@ -29,26 +29,26 @@ function SignupSignin() {
           if (user.email === email) {
             toast.error("User already present!");
             setLoading(false);
-          } else {
-            localStorage.setItem("cart", JSON.stringify(cart));
-            const token = "123";
-            localStorage.setItem("token", token);
-            let obj = {
-              name,
-              email,
-              password,
-            };
-            localStorage.setItem("user", JSON.stringify(obj));
-            toast.success("User Created!");
-            setLoading(false);
-
-            navigate("/home");
           }
-          setName("");
-          setEmail("");
-          setPassword("");
-          setConfirmPassword("");
+        } else {
+          localStorage.setItem("cart", JSON.stringify(cart));
+          const token = "123";
+          localStorage.setItem("token", token);
+          let obj = {
+            name,
+            email,
+            password,
+          };
+          localStorage.setItem("user", JSON.stringify(obj));
+          toast.success("User Created!");
+          setLoading(false);
+
+          navigate("/home");
         }
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
       } else {
         toast.error("Password and confirm Password don't match!");
         setLoading(false);
