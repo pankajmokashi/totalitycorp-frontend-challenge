@@ -35,7 +35,7 @@ function Cart() {
               cart.length > 0 && (
                 <button className='clear-cart' onClick={() => {
                   setCart([]);
-                  localStorage.setItem("cart", JSON.stringify(cart));
+                  localStorage.setItem("cart", JSON.stringify([]));
                 }}>Clear Cart</button>
               )
             }
