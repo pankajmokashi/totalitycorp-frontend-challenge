@@ -1,0 +1,30 @@
+.filter-div{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 40px;
+   position: relative;
+}
+.filter-div dl{
+    margin: 0;
+}
+.filter-div dt{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .filter-div{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+

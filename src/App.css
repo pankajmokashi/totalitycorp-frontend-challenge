@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    display: flex;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cart-title{
+    position: sticky;
+    top: 80px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    font-size: 28px; 
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cart-title p{
+    font-weight: 400;
+    margin: 0;
+    padding-right: 20px;
+    border-right: 1px solid white;
+}
+.cart-title p span{
+    font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.cart-title button{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(195, 195, 195);
+    color: black;
+    cursor: pointer;
+    font-size: 20px; 
+    font-weight: 600;
+    border: none;
+}
+.cart-title button:hover{
+    background-color: white;
+}
+.clear-cart{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    z-index: 10;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.final-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+.final-items table{
+    border-collapse: collapse;
+    width: 50%;
+    height: 70%;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.buy{
+    width: 50%;
+    height: 40px;
+    border: none;
+    background-color: rgb(83, 83, 83);
+    color:  white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.buy:hover{
+    background-color: black;
+}
+
+.filter{
+    margin: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.filter > p{
+    width: 100px;
+    height: 100%;
+    margin: 0;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.filter-items{
+    display: none;
+    height: 100px;
+    border: 1px solid black;
+}
+
+
+@media screen and (max-width: 900px) {
+    .cart-title{
+       font-size: 18px;
+    }
+    .cart-title p{
+        padding-right: 10px;
+    }
+    .final-items table, .buy{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .filter-items{
+        height: auto;
+    }
+}
+@media screen and (max-width: 650px) {
+    .cart-title{
+       font-size: 18px;
+    }
+    .cart-title p{
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .final-items table, .buy{
+        width: 80%;
+    }
 }
