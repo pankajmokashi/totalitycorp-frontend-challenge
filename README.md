@@ -23,15 +23,12 @@
 
 ---
 
+### Additional Challenges(optional) 
+- User Authentication: 
+    - Provide user registration and login functionalities. 
+- Display the user's name and avatar when logged in. 
+
+---
+
 ### Live Link
 - https://frontend-challenge-totalitycorp.netlify.app/
-
-
-
-Additional Challenges(optional) 
-
-User Authentication: 
-
-Provide user registration and login functionalities. 
-
-Display the user's name and avatar when logged in. 
